@@ -1,0 +1,358 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pedi home</title>
+  <link rel="stylesheet" href="topbar.css">
+  <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="content.css">
+<link rel="stylesheet" href="css/footer.css">
+  
+</head>
+<body>
+  
+  
+  
+  <div class="overlay" id="overlay"></div>
+  
+
+    
+    <div class="topbar">
+     
+        <!-- Logo -->
+        <div class="logo">
+            <img src="https://via.placeholder.com/100x40?text=LOGO" alt="Company Logo">
+        </div>
+
+        <!-- Delivery Options -->
+        <div class="delivery">
+            <span class="small-text">Deliver to</span>
+            <span class="big-text">Your Location</span>
+        </div>
+
+        <!-- Search -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>btn</button>
+        </div>
+
+        <div class="top-bar-right">
+
+          <!-- Country -->
+          <div class="country">
+              <img src="https://flagcdn.com/w40/us.png" alt="Country Flag">
+          </div>
+
+          <!-- Sign In -->
+          <a href="account.html" >
+            <div class="sign-in">
+              <span class="small-text">Hello, Sign in</span>
+              <span class="big-text">Account</span>
+          </div>
+          </a>
+
+          <!-- Returns & Orders -->
+          <div class="returns-orders">
+              <span class="small-text">Returns</span>
+              <span class="big-text">& Orders</span>
+          </div>
+
+          <!-- Cart -->
+          <a href="cart.html">
+            <div class="cart">
+              🛒 Cart
+          </div>
+          </a>
+
+        </div>      
+
+    </div tobar>
+
+    <div class="sub-topbar">
+        <div class="menu-btndiv" id="menuBtndiv">
+            <button class="menu-btn" id="menuBtn">menu</button>
+        </div>
+        <div> write a list</div>
+        <div>many things</div>
+        
+      </div>
+    
+  
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+
+    <button class="close-btn" id="closeBtn">X</button>
+
+    <div class="profile-div">
+      <img >
+      <div class="profile-text">Hello, Sign-in</div>
+    </div>
+
+    <!-- Dropdown 1 -->
+     <div>
+        <a href="#">Electronics</a>
+        <a href="#">Smart Home</a>
+        <a href="#">Fashion</a>
+        <button class="dropdown-btn">
+          <span>
+            More ▼
+          </span>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">Laptops</a>
+          <a href="#">Phones</a>
+          <a href="#">Accessories</a>
+          <a href="#">Accessories</a>
+          <a href="#">Accessories</a>
+          <a href="#">Accessories</a>
+          <a href="#">Accessories</a>
+          <a href="#">Accessories</a>
+        </div>
+     </div>
+
+    
+    
+
+    
+
+    <!-- Dropdown 2 -->
+    <button class="dropdown-btn">Services ▼</button>
+
+    <div class="dropdown-container">
+      <a href="#">Delivery</a>
+      <a href="#">Support</a>
+    </div>
+
+    <div class="helpnsettings">
+      <a href="#">Help & Settings</a> 
+      <a href="#">Your Account</a>
+      <a href="#">Your Orders</a>
+      <a href="#">Customer Service</a>
+    </div>
+
+  </div >
+
+
+
+
+
+
+  <div class="conten">
+
+    <main class="container">
+
+  <!-- Hero / banner -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div>
+      <h1 id="hero-title">Welcome to Your Storefront</h1>
+      <p>Clean, responsive sections powered by CSS Grid. Flexible cards that reflow on any screen size.</p>
+      <a class="cta" href="#">Get Started</a>
+    </div>
+    <div class="art">Hero Image / Illustration</div>
+  </section>
+
+  <!-- Section: New Arrivals -->
+  <header class="section-header">
+    <h2>New Arrivals</h2>
+    <a href="#">View all →</a>
+  </header>
+
+  <section class="grid" aria-label="New Arrivals">
+    <!-- Card -->
+    <article class="card">
+      <div class="media">Image</div>
+      <div class="body">
+        <h3>Product Name</h3>
+        <p>Short description goes here.</p>
+      </div>
+      <div class="footer">
+        <span>$29.99</span>
+        <a class="btn primary" href="#">Add to Cart</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="media">Image</div>
+      <div class="body">
+        <h3>Wireless Headset</h3>
+        <p>Noise-cancelling, 24h battery.</p>
+      </div>
+      <div class="footer">
+        <span>$89.00</span>
+        <a class="btn" href="#">Details</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="media">Image</div>
+      <div class="body">
+        <h3>Smart Watch</h3>
+        <p>Heart rate & GPS tracking.</p>
+      </div>
+      <div class="footer">
+        <span>$119.00</span>
+        <a class="btn primary" href="#">Add to Cart</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="media">Image</div>
+      <div class="body">
+        <h3>Backpack</h3>
+        <p>Water-resistant, 25L capacity.</p>
+      </div>
+      <div class="footer">
+        <span>$49.00</span>
+        <a class="btn" href="#">Details</a>
+      </div>
+    </article>
+  </section>
+
+  <!-- Section: Featured content -->
+  <header class="section-header">
+    <h2>Featured</h2>
+    <a href="#">Explore →</a>
+  </header>
+
+  <section class="feature-grid" aria-label="Featured">
+    <article class="feature">
+      <h3>Weekly Deals</h3>
+      <p>Save up to 40% on top categories. Updated every Friday.</p>
+      <div>
+        <a class="btn primary" href="#">Shop Deals</a>
+        <a class="btn" href="#">Learn More</a>
+      </div>
+    </article>
+    <article class="feature">
+      <h3>Editor’s Picks</h3>
+      <p>Hand-selected items trending with customers this month.</p>
+      <div>
+        <a class="btn" href="#">Browse Picks</a>
+      </div>
+    </article>
+  </section>
+
+  <!-- Section: Categories (another grid) -->
+  <header class="section-header">
+    <h2>Shop by Category</h2>
+  </header>
+  <section class="grid" aria-label="Categories">
+    <article class="card">
+      <div class="media">Electronics</div>
+      <div class="body">
+        <h3>Electronics</h3>
+        <p>Phones, laptops, audio, and more.</p>
+      </div>
+      <div class="footer">
+        <a class="btn" href="#">View</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="media">Home</div>
+      <div class="body">
+        <h3>Home & Kitchen</h3>
+        <p>Cookware, decor, and essentials.</p>
+      </div>
+      <div class="footer">
+        <a class="btn" href="#">View</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="media">Fashion</div>
+      <div class="body">
+        <h3>Fashion</h3>
+        <p>Men • Women • Kids</p>
+      </div>
+      <div class="footer">
+        <a class="btn" href="#">View</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="media">Sports</div>
+      <div class="body">
+        <h3>Sports & Outdoors</h3>
+        <p>Gear for every adventure.</p>
+      </div>
+      <div class="footer">
+        <a class="btn" href="#">View</a>
+      </div>
+    </article>
+  </section>
+
+</main>
+    
+
+  </div> 
+
+<!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <!-- Company Info -->
+        <div class="footer-section">
+          <h3>About Our Store</h3>
+          <div class="contact-info">
+            <p>Your one-stop shop for all your needs. Quality products at affordable prices.</p>
+            <p>Email: info@pedimarketplace.com</p>
+            <p>Phone: +1 (555) 123-4567</p>
+            <p>Address: 123 Shopping Street, Retail City, RC 10001</p>
+          </div>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="footer-section">
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">Order Tracking</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">Shopping Cart</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">t</a>
+            <a href="#" aria-label="Instagram">i</a>
+            <a href="#" aria-label="Pinterest">p</a>
+          </div>
+          <div class="contact-info">
+            <p>Subscribe to our newsletter</p>
+            <form>
+              <input type="email" placeholder="Your email address" style="width: 100%; padding: 8px; margin: 8px 0; border: 1px solid #ccc; border-radius: 4px;">
+              <button type="submit" style="background: #007bff; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer;">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Pedi Marketplace. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Accessibility</a></p>
+      </div>
+    </div>
+  </footer>
+<script src="js/footer.js"></script>
+ 
+  <script src="home.js"></script>
+</body>
+</html>

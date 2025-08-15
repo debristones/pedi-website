@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In / Create Account</title>
+    <link rel="stylesheet" href="css/signin.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sign In Form -->
+        <div id="signInForm">
+            <h2>Sign In</h2>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <a href="home.html">
+              <button type="submit" class="btn btn-primary">Sign In</button>
+            </a>
+            <div class="toggle">
+                Don't have an account? <a onclick="toggleForms()">Create one</a>
+            </div>
+        </div>
+
+        <!-- Create Account Form -->
+        <div id="createAccountForm" style="display: none;">
+            <h2>Create Account</h2>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button type="submit" class="btn btn-primary">Register</button>
+            <div class="toggle">
+                Already have an account? <a onclick="toggleForms()">Sign In</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleForms() {
+            document.getElementById("signInForm").style.display =
+                document.getElementById("signInForm").style.display === "none" ? "block" : "none";
+            document.getElementById("createAccountForm").style.display =
+                document.getElementById("createAccountForm").style.display === "none" ? "block" : "none";
+        }
+    </script>
+    <script src="js/footer.js"></script>
+</body>
+</html>

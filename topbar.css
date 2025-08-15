@@ -1,0 +1,166 @@
+
+
+.logo,.delivery,.search-bar,.country,.sign-in,.returns-orders,.cart {
+  background-color:rgb(15, 15, 85) ;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+
+.topbar {
+  width: 1264.64px;
+  position: relative;
+  width: auto;
+  color: white;
+  background-color: rgb(15, 15, 85);
+  height: 45px;
+  display: flex;
+  align-items: center; 
+  padding: 10px 20px; 
+}
+
+.sub-topbar {
+  background-color: rgb(110, 110, 13);
+  color: white;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  
+}
+
+.sub-topbar div {
+    margin-right: 20px;
+    cursor: pointer;
+    width: auto;
+}
+
+.menu-btndiv {
+   margin-left: 10px;
+}
+     
+.menu-btn {
+  top: 10px;
+  border: none;
+  border-radius :20px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 3px;
+  z-index: 2000;
+}
+
+.menu-btn.move{
+  left: 250px;
+  z-index: 1000;
+}
+
+
+.overlay {
+  position: fixed;          /* Stays in place when scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark transparent effect */
+  display: none;             /* Hidden by default */
+  z-index: 998;               /* Just under your sidebar */
+}
+
+.overlay.show {
+  display: block; 
+  /* Visible when active */
+}
+
+
+
+
+.logo {
+  min-width: 150px;
+  
+}
+
+.logo img {
+  height: 40px;
+}
+
+.delivery {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  min-width: 150px;
+  
+}
+
+.small-text {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.big-text {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.search-bar {
+  display: flex;
+  flex: 1;
+  margin: 0 20px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #febd69;
+  cursor: pointer;
+  font-size: 16px;
+  right: 0px;
+}
+
+.country {
+  display: flex;
+  flex: auto;
+  align-items: center;
+  min-width: 50px;
+}
+
+.country img {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+
+.sign-in, .returns-orders {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  min-width: 115px;
+  margin-left: 10px;
+  flex: 1;
+}
+
+.cart {
+  min-width: 100px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  
+}
+.top-bar-right {
+  display: flex;
+  align-items: center;
+
+}
+
+   
+ 

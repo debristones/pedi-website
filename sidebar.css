@@ -1,0 +1,125 @@
+:root {
+  --bg: #f5f6f8;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --accent: #0ea5e9;
+  --radius: 14px;
+  --shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
+  --gap: 16px;
+  --container: 1200px;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    width: 1264.67px;
+  }
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  z-index: 999;
+  background-color: #f5f6f8;
+  height: 100vh;
+}
+
+.sidebar a {
+  padding: 0.75rem 1rem;
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+}
+.sidebar a:hover {
+  background-color: #575757;
+}
+.sidebar.open {
+  left: 0;
+  
+}
+
+.close-btn{
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-color:inherit;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #555;
+}
+
+.profile-div{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #3e1515;
+  color: white;
+  height: 60px;
+}
+
+.dropdown-btn {
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    font-size: inherit;
+    align-content: left;
+    padding: 10px;
+    padding-left: 15px;
+    text-align: left;
+  }
+
+  .dropdown-btn:hover {
+    background-color: #575757;
+  }
+
+.dropdown-container a {
+    background-color: #f5f6f8;
+    color: var(--text);
+    text-decoration: none;  
+    left: 0;  
+  }
+
+  .dropdown-container {
+    max-height: 0;
+    overflow: hidden;
+    background-color:inherit;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease-in-out;
+    justify-content: flex-start;
+  }
+  .dropdown-container.show {
+    max-height: 300px; /* adjust if you have more items */
+    opacity:1;
+}
+
+.sidebar.open::-webkit-scrollbar {
+  width: 10px;
+  border: 10px;
+
+}
+
+.sidebar.open::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.sidebar.open::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.sidebar.open::-webkit-scrollbar-track {
+background: #f0f0f0;
+border-radius: 6px;
+}

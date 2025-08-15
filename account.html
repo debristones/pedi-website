@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Account - Pedi Marketplace</title>
+  <link rel="stylesheet" href="css/account.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+  <!-- Main Content -->
+  <div class="content">
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> > <span>My Account</span>
+      </div>
+
+      <h1>My Account</h1>
+
+      <!-- Account Container -->
+      <div class="account-container">
+        <!-- Account Navigation -->
+        <div class="account-nav">
+          <ul>
+            <li class="active"><a href="#profile"><i class="fas fa-user"></i> Profile</a></li>
+            <li><a href="#orders"><i class="fas fa-box"></i> My Orders</a></li>
+            <li><a href="#wishlist"><i class="fas fa-heart"></i> Wishlist</a></li>
+            <li><a href="#addresses"><i class="fas fa-map-marker-alt"></i> Address Book</a></li>
+            <li><a href="#payment"><i class="fas fa-credit-card"></i> Payment Methods</a></li>
+            <li><a href="#settings"><i class="fas fa-cog"></i> Account Settings</a></li>
+          </ul>
+        </div>
+
+        <!-- Account Content -->
+        <div class="account-content">
+          <!-- Profile Section -->
+          <div id="profile" class="account-section active">
+            <h2>Profile Information</h2>
+            <div class="profile-details">
+              <div class="profile-info">
+                <div class="info-row">
+                  <label>Name:</label>
+                  <span>John Doe</span>
+                </div>
+                <div class="info-row">
+                  <label>Email:</label>
+                  <span>john.doe@example.com</span>
+                </div>
+                <div class="info-row">
+                  <label>Phone:</label>
+                  <span>+1 (555) 123-4567</span>
+                </div>
+                <div class="info-row">
+                  <label>Member Since:</label>
+                  <span>January 15, 2022</span>
+                </div>
+                <button class="btn primary">Edit Profile</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Orders Section -->
+          <div id="orders" class="account-section">
+            <h2>My Orders</h2>
+            <div class="orders-list">              
+              <div class="order-item">
+                <div class="order-header">
+                  <div class="order-id">Order #12343</div>
+                  <div class="order-date">April 28, 2023</div>
+                  <div class="order-status delivered">Delivered</div>
+                </div>
+                <div class="order-details">
+                  <div class="order-image">
+                    <img src="https://via.placeholder.com/80x80?text=iPad+Pro" alt="iPad Pro">
+                  </div>
+                  <div class="order-info">
+                    <h4>Apple iPad Pro 12.9" (5th Gen)</h4>
+                    <p>Wi-Fi + Cellular, 256GB</p>
+                    <p>Quantity: 1</p>
+                  </div>
+                  <div class="order-price">$1,099.99</div>
+                </div>
+                <div class="order-actions">
+                  <button class="btn secondary">View Order</button>
+                  <button class="btn secondary">Buy Again</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wishlist Section -->
+          <div id="wishlist" class="account-section">
+            <h2>My Wishlist</h2>
+            <div class="wishlist-items">              
+              <div class="wishlist-item">
+                <div class="item-image">
+                  <img src="https://via.placeholder.com/150x150?text=Apple+Watch" alt="Apple Watch">
+                </div>
+                <div class="item-details">
+                  <h4>Apple Watch Series 8</h4>
+                  <p>45mm, GPS, Midnight Aluminum</p>
+                  <div class="item-price">$399.99</div>
+                </div>
+                <div class="item-actions">
+                  <button class="btn primary">Add to Cart</button>
+                  <button class="btn secondary">Remove</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Address Book Section -->
+          <div id="addresses" class="account-section">
+            <h2>Address Book</h2>
+            <div class="address-list">
+              <div class="address-item">
+                <div class="address-details">
+                  <h4>Home</h4>
+                  <p>John Doe</p>
+                  <p>123 Main Street</p>
+                  <p>Apartment 4B</p>
+                  <p>New York, NY 10001</p>
+                  <p>United States</p>
+                  <p>Phone: +1 (555) 123-4567</p>
+                </div>
+                <div class="address-actions">
+                  <button class="btn secondary">Edit</button>
+                  <button class="btn secondary">Delete</button>
+                  <button class="btn secondary">Set as Default</button>
+                </div>
+              </div>
+              
+              <div class="address-item">
+                <div class="address-details">
+                  <h4>Work</h4>
+                  <p>John Doe</p>
+                  <p>456 Business Avenue</p>
+                  <p>Suite 100</p>
+                  <p>New York, NY 10002</p>
+                  <p>United States</p>
+                  <p>Phone: +1 (555) 987-6543</p>
+                </div>
+                <div class="address-actions">
+                  <button class="btn secondary">Edit</button>
+                  <button class="btn secondary">Delete</button>
+                </div>
+              </div>
+            </div>
+            <button class="btn primary">Add New Address</button>
+          </div>
+
+          <!-- Payment Methods Section -->
+          <div id="payment" class="account-section">
+            <h2>Payment Methods</h2>
+            <div class="payment-methods">
+              <di/v class="payment-method">
+                <div class="payment-details">
+                  <i class="fab fa-cc-visa"></i>
+                  <div class="card-info">
+                    <h4>Visa ending in 1234</h4>
+                    <p>Expires 12/25</p>
+                  </div>
+                </div>
+                <div class="payment-actions">
+                  <button class="btn secondary">Edit</button>
+                  <button class="btn secondary">Delete</button>
+                  <button class="btn secondary">Set as Default</button>
+                </div>
+              </div>
+            <button class="btn primary">Add New Payment Method</button>
+          </div>
+
+          <!-- Account Settings Section -->
+          <div id="settings" class="account-section">
+            <h2>Account Settings</h2>
+            <div class="settings-form">
+              <form>
+                <div class="form-group">
+                  <div class="leb"><label for="email">Email Address</label></div>
+                  <div class="inpu"><input type="email" id="email" value="john.doe@example.com"></div>
+                </div>
+                
+                <div class="form-group">
+                  <div class="leb"><label for="phone">Phone Number</label></div>
+                  <div class="inpu"><input type="tel" id="phone" value="+1 (555) 123-4567"></div>
+                </div>
+                
+                <div class="form-group">
+                  <div class="leb"><label for="password">Password</label></div>
+                  <div class="inpu">
+                    <input type="password" id="password" value="••••••••">
+                    <button class="btn secondary">Change Password</button>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  
+                    <input type="checkbox" id="newsletter" checked>
+                    Subscribe to newsletter
+                  
+                </div>
+                
+                <div class="form-group">
+                  
+                    <input type="checkbox" id="promotions" checked>
+                    Receive promotional emails
+                 
+                </div>
+                
+                <div class="form-actions">
+                  <button class="btn primary">Save Changes</button>
+                  <button class="btn secondary">Cancel</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Footer -->
+<script src="js/footer.js"></script>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <!-- Company Info -->
+        <div class="footer-section">
+          <h3>About Our Store</h3>
+          <div class="contact-info">
+            <p>Your one-stop shop for all your needs. Quality products at affordable prices.</p>
+            <p>Email: info@pedimarketplace.com</p>
+            <p>Phone: +1 (555) 123-4567</p>
+            <p>Address: 123 Shopping Street, Retail City, RC 10001</p>
+          </div>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="footer-section">
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">Order Tracking</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">Shopping Cart</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">t</a>
+            <a href="#" aria-label="Instagram">i</a>
+            <a href="#" aria-label="Pinterest">p</a>
+          </div>
+          <div class="contact-info">
+            <p>Subscribe to our newsletter</p>
+            <form>
+              <input type="email" placeholder="Your email address" style="width: 100%; padding: 8px; margin: 8px 0; border: 1px solid #ccc; border-radius: 4px;">
+              <button type="submit" style="background: #007bff; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer;">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Pedi Marketplace. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Accessibility</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/account.js"></script>
+</body>
+</html>

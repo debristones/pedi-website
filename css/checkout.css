@@ -1,0 +1,409 @@
+/* Checkout page styles using professional CSS variables */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Primary Colors */
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-light: #dbeafe;
+  
+  /* Secondary Colors */
+  --secondary-color: #64748b;
+  --secondary-hover: #475569;
+  --secondary-light: #f1f5f9;
+  
+  /* Accent Colors */
+  --accent-color: #f59e0b;
+  --accent-hover: #d97706;
+  --accent-light: #fffbeb;
+  
+  /* Neutral Colors */
+  --white: #ffffff;
+  --light-gray: #f8fafc;
+  --gray: #e2e8f0;
+  --dark-gray: #94a3b8;
+  --text-dark: #1e293b;
+  --text-light: #64748b;
+  
+  /* Status Colors */
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--font-primary);
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  height: 50px;
+  padding: 0 var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  background-color: var(--light-gray);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.breadcrumb a {
+  color: var(--primary-color);
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* Checkout Container */
+.checkout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  gap: var(--spacing-lg);
+}
+
+/* Payment Methods */
+.payment-methods {
+  margin-bottom: var(--spacing-lg);
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size-lg);
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.payment-method {
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray);
+  border-radius: var(--radius-lg);
+  background-color: var(--white);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-md) 0;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+  transition: all var(--transition-fast);
+}
+
+.payment-method:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+/* Cart Summary */
+.cart-summary {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  align-self: flex-start;
+  position: sticky;
+  top: var(--spacing-lg);
+}
+
+.summary-header h2 {
+  padding: var(--spacing-sm) 0;
+  margin: 0;
+  color: var(--text-dark);
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--gray);
+}
+
+.summary-details {
+  margin-bottom: var(--spacing-lg);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--gray);
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.discount {
+  color: var(--error-color);
+}
+
+.total {
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  color: var(--text-dark);
+}
+
+.summary-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--spacing-lg) 0;
+}
+
+.summary-actions button {
+  margin: 0;
+  padding: var(--spacing-sm) var(--spacing-md);
+  width: 100%;
+  max-width: 300px;
+  font-size: var(--font-size-md);
+}
+
+.btn {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-align: center;
+  transition: all var(--transition-normal);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.method-logoname {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+/* Promo Code */
+.summary-promo {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--gray);
+}
+
+.summary-promo h4 {
+  padding: 0;
+  margin: 0 0 var(--spacing-sm) 0;
+  font-size: var(--font-size-md);
+  color: var(--text-dark);
+}
+
+.promo-input {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.promo-input button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  background-color: var(--success-color);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  height: 100%;
+  font-weight: 500;
+  transition: background-color var(--transition-fast);
+}
+
+.promo-input button:hover {
+  background-color: var(--success-color);
+}
+
+.promo-input input {
+  flex: 1;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray);
+  font-size: var(--font-size-sm);
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .checkout-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .payment-method {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .method-logoname {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .summary-header h2 {
+    font-size: var(--font-size-lg);
+  }
+  
+  .summary-actions button,
+  .btn-primary {
+    max-width: 100%;
+  }
+  
+  .promo-input {
+    flex-direction: column;
+  }
+  
+  .promo-input button {
+    position: relative;
+    width: 100%;
+    margin-top: var(--spacing-sm);
+  }
+  
+  /* Additional responsive improvements */
+  
+  /* Ensure proper spacing on mobile */
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .breadcrumb {
+    height: auto;
+    padding: var(--spacing-sm) 0;
+    font-size: var(--font-size-xs);
+  }
+  
+  h3 {
+    font-size: var(--font-size-md);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .payment-method {
+    padding: var(--spacing-md);
+    margin: var(--spacing-sm) 0;
+  }
+  
+  .cart-summary {
+    padding: var(--spacing-md);
+  }
+  
+  .summary-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+  
+  .summary-row.total {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .checkout-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .payment-method {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .checkout-container {
+    grid-template-columns: 1fr 0.7fr;
+  }
+}
+
+/* Improve focus states for accessibility */
+.btn:focus,
+.promo-input input:focus,
+.promo-input button:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Add smooth transitions for interactive elements */
+.payment-method,
+.cart-summary,
+.btn {
+  transition: all var(--transition-fast);
+}
+
+/* Improve touch targets for mobile */
+@media screen and (max-width: 768px) {
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .promo-input input {
+    min-height: 44px;
+  }
+  
+  .promo-input button {
+    min-height: 44px;
+  }
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping Cart - Pedi Marketplace</title>
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/checkout.css">
+<link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+  <!-- Main Content -->
+  <div class="content">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> > <span>Shopping Cart</span>
+      </div>
+
+      <h1>Shopping Cart</h1>
+
+      <!-- Cart Container -->
+      <div class="cart-container">
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+          <div class="summary-header">
+            <h2>Order Summary</h2>
+          </div>
+          
+          <div class="summary-details">
+            <div class="summary-row">
+              <span>Subtotal (3 items)</span>
+              <span>$3,349.96</span>
+            </div>
+            <div class="summary-row">
+              <span>Shipping</span>
+              <span>FREE</span>
+            </div>
+            <div class="summary-row">
+              <span>Tax</span>
+              <span>$268.00</span>
+            </div>
+            <div class="summary-row discount">
+              <span>Discount (10% off)</span>
+              <span>-$335.00</span>
+            </div>
+            <div class="summary-row total">
+              <span>Total</span>
+              <span>$3,282.96</span>
+            </div>
+          </div>
+          
+          <div class="summary-actions">
+            <a href="checkout.html">
+              <button class="btn primary" id="checkout">Proceed to Checkout</button>
+            </a>
+          </div>
+        
+        </div>
+
+        <div class="cart-items">
+
+          <div class="cart-item">
+            <div class="item-image">
+             <img src="https://via.placeholder.com/150x150?text=iPad+Pro" alt="iPad Pro">
+            </div>
+            <div class="item-details">
+             <h3>Apple iPad Pro 12.9" (5th Gen)</h3>
+             <p>Wi-Fi + Cellular, 256GB</p>
+             <div class="item-price">$1,099.99</div>
+            </div>
+            <div class="item-quantity">
+             <label for="quantity-3">Quantity:</label>
+              <select id="quantity-3">
+               <option selected>1</option>
+               <option>2</option>
+               <option>3</option>
+             </select>
+            </div>
+            <div class="item-total">
+             $1,099.99
+            </div>
+            <div class="item-actions">
+             <button class="remove-item" aria-label="Remove item">
+              <i class="fas fa-trash"></i>
+            </button>
+           </div>
+          </div>
+
+          <div class="cart-item">
+            <div class="item-image">
+             <img src="https://via.placeholder.com/150x150?text=iPad+Pro" alt="iPad Pro">
+            </div>
+            <div class="item-details">
+             <h3>Apple iPad Pro 12.9" (5th Gen)</h3>
+             <p>Wi-Fi + Cellular, 256GB</p>
+             <div class="item-price">$1,099.99</div>
+            </div>
+            <div class="item-quantity">
+             <label for="quantity-3">Quantity:</label>
+              <select id="quantity-3">
+               <option selected>1</option>
+               <option>2</option>
+               <option>3</option>
+             </select>
+            </div>
+            <div class="item-total">
+             $1,099.99
+            </div>
+            <div class="item-actions">
+             <button class="remove-item" aria-label="Remove item">
+              <i class="fas fa-trash"></i>
+            </button>
+           </div>
+          </div>
+
+          <div class="cart-item">
+            <div class="item-image">
+             <img src="https://via.placeholder.com/150x150?text=iPad+Pro" alt="iPad Pro">
+            </div>
+            <div class="item-details">
+             <h3>Apple iPad Pro 12.9" (5th Gen)</h3>
+             <p>Wi-Fi + Cellular, 256GB</p>
+             <div class="item-price">$1,099.99</div>
+            </div>
+            <div class="item-quantity">
+             <label for="quantity-3">Quantity:</label>
+              <select id="quantity-3">
+               <option selected>1</option>
+               <option>2</option>
+               <option>3</option>
+             </select>
+            </div>
+            <div class="item-total">
+             $1,099.99
+            </div>
+            <div class="item-actions">
+             <button class="remove-item" aria-label="Remove item">
+              <i class="fas fa-trash"></i>
+            </button>
+           </div>
+          </div>
+
+          <!-- Saved for Later -->
+        <div class="saved-items">
+          <h3>Saved for Later</h3>
+          <div class="saved-item">
+            <div class="item-image">
+              <img src="https://via.placeholder.com/100x100?text=MacBook+Air" alt="MacBook Air">
+            </div>
+            <div class="item-details">
+              <h4>Apple MacBook Air M2</h4>
+              <p>13.6-inch, 8GB RAM, 256GB SSD</p>
+              <div class="item-price">$1,199.99</div>
+            </div>
+            <div class="item-actions">
+              <button class="btn secondary">Move to Cart</button>
+              <button class="remove-item" aria-label="Remove item">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        </div>
+
+        
+        
+
+        
+
+      </div>
+
+      
+    </div>
+  </div>
+<!-- Footer -->
+<script src="js/footer.js"></script>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <!-- Company Info -->
+        <div class="footer-section">
+          <h3>About Our Store</h3>
+          <div class="contact-info">
+            <p>Your one-stop shop for all your needs. Quality products at affordable prices.</p>
+            <p>Email: info@pedimarketplace.com</p>
+            <p>Phone: +1 (555) 123-4567</p>
+            <p>Address: 123 Shopping Street, Retail City, RC 10001</p>
+          </div>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="footer-section">
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">Order Tracking</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">Shopping Cart</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">t</a>
+            <a href="#" aria-label="Instagram">i</a>
+            <a href="#" aria-label="Pinterest">p</a>
+          </div>
+          <div class="contact-info">
+            <p>Subscribe to our newsletter</p>
+            <form>
+              <input type="email" placeholder="Your email address" style="width: 100%; padding: 8px; margin: 8px 0; border: 1px solid #ccc; border-radius: 4px;">
+              <button type="submit" style="background: #007bff; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer;">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Pedi Marketplace. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Accessibility</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
