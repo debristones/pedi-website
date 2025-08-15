@@ -7,7 +7,68 @@
   <link rel="stylesheet" href="css/account.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/product-containers.css">
+<link rel="stylesheet" href="topbar.css">
 </head>
+<div class="topbar">
+     
+        <!-- Logo -->
+        <div class="logo">
+            <img src="https://via.placeholder.com/100x40?text=LOGO" alt="Company Logo">
+        </div>
+
+        <!-- Delivery Options -->
+        <div class="delivery">
+            <span class="small-text">Deliver to</span>
+            <span class="big-text">Your Location</span>
+        </div>
+
+        <!-- Search -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>btn</button>
+        </div>
+
+        <div class="top-bar-right">
+
+          <!-- Country -->
+          <div class="country">
+              <img src="https://flagcdn.com/w40/us.png" alt="Country Flag">
+          </div>
+
+          <!-- Sign In -->
+          <a href="account.html" >
+            <div class="sign-in">
+              <span class="small-text">Hello, Sign in</span>
+              <span class="big-text">Account</span>
+          </div>
+          </a>
+
+          <!-- Returns & Orders -->
+          <div class="returns-orders">
+              <span class="small-text">Returns</span>
+              <span class="big-text">& Orders</span>
+          </div>
+
+          <!-- Cart -->
+          <a href="cart.html">
+            <div class="cart">
+              🛒 Cart
+          </div>
+          </a>
+
+        </div>      
+
+    </div>
+
+    <div class="sub-topbar">
+        <div class="menu-btndiv" id="menuBtndiv">
+            <button class="menu-btn" id="menuBtn">menu</button>
+        </div>
+        <div> write a list</div>
+        <div>many things</div>
+        
+      </div>
 <body>
 
   <!-- Main Content -->
@@ -222,6 +283,120 @@
       </div>
     </div>
   </div>
+
+ <!-- Product Containers -->
+ <div class="product-containers">
+    <!--container 1-->
+   <div class="product-container">
+     <div class="product-container-header">
+       <h2>Popular Products</h2>
+     </div>
+     <div class="product-grid">
+       <div class="product-card">
+         <div class="media">Image</div>
+         <div class="body">
+           <h3>Wireless Headphones</h3>
+           <p>Noise cancelling with 30hr battery</p>
+           <div class="price">$89.99</div>
+           <button class="btn primary">Add to Cart</button>
+         </div>
+       </div>
+       <div class="product-card">
+         <div class="media">Image</div>
+         <div class="body">
+           <h3>Smart Watch</h3>
+           <p>Heart rate monitor and GPS</p>
+           <div class="price">$199.99</div>
+           <button class="btn primary">Add to Cart</button>
+         </div>
+       </div>
+       <div class="product-card">
+         <div class="media">Image</div>
+         <div class="body">
+           <h3>Bluetooth Speaker</h3>
+           <p>360° sound with deep bass</p>
+           <div class="price">$59.99</div>
+           <button class="btn primary">Add to Cart</button>
+         </div>
+       </div>
+     </div>
+   </div>
+   
+   <div class="product-container">
+     <div class="product-container-header">
+       <h2>Recommended For You</h2>
+     </div>
+     <div class="product-grid">
+       <div class="product-card">
+         <div class="media">Image</div>
+         <div class="body">
+           <h3>Phone Case</h3>
+           <p>Shockproof with sleek design</p>
+           <div class="price">$24.99</div>
+           <button class="btn primary">Add to Cart</button>
+         </div>
+       </div>
+       <div class="product-card">
+         <div class="media">Image</div>
+         <div class="body">
+           <h3>Power Bank</h3>
+           <p>20000mAh fast charging</p>
+           <div class="price">$39.99</div>
+           <button class="btn primary">Add to Cart</button>
+         </div>
+       </div>
+       <div class="product-card">
+         <div class="media">Image</div>
+         <div class="body">
+           <h3>Tablet Stand</h3>
+           <p>Adjustable angle for any surface</p>
+           <div class="price">$19.99</div>
+           <button class="btn primary">Add to Cart</button>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <div class="product-container">
+     <div class="product-container-header">
+       <h2>Top Sellers</h2>
+     </div>
+     <div class="product-grid">
+       <div class="product-card">
+         <div class="media">Image</div>
+         <div class="body">
+           <h3>Wireless Earbuds</h3>
+           <p>True wireless with charging case</p>
+           <div class="price">$79.99</div>
+           <button class="btn primary">Add to Cart</button>
+         </div>
+       </div>
+       <div class="product-card">
+         <div class="media">Image</div>
+         <div class="body">
+           <h3>Fitness Tracker</h3>
+           <p>Heart rate, sleep tracking, waterproof</p>
+           <div class="price">$49.99</div>
+           <button class="btn primary">Add to Cart</button>
+         </div>
+       </div>
+       <div class="product-card">
+         <div class="media">Image</div>
+         <div class="body">
+           <h3>Phone Charger</h3>
+           <p>Fast charging with 6ft cable</p>
+           <div class="price">$19.99</div>
+           <button class="btn primary">Add to Cart</button>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   </div>
+
+   
+ 
+
 <!-- Footer -->
 <script src="js/footer.js"></script>
   <footer class="footer">
