@@ -478,6 +478,9 @@ input:focus, select:focus {
   box-shadow: var(--shadow-md);
   overflow: hidden;
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  display: grid;
+  grid-template-columns: 8fr 2fr;
+  background-color: var(--warning-color);
 }
 
 .card:hover {
