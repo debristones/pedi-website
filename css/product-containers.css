@@ -20,7 +20,7 @@ h3{
   overflow: hidden;
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
   margin: 10px;
-  background-color:yellow ;
+  background-color: var(--light-gray);
 }
 
 
