@@ -56,7 +56,7 @@ h3{
 
 .product-card .media {
   height: 180px;
-  background-color: var(--light-gray);
+  background-color: goldenrod;
   display: flex;
   align-items: center;
   justify-content: center;
