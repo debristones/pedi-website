@@ -20,7 +20,8 @@ h3{
   overflow: hidden;
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
   margin: 10px;
-  background-color: var(--light-gray);
+  background-color: lightgreen;
+
 }
 
 
@@ -50,6 +51,7 @@ h3{
   grid-template-rows: 2fr 0.2fr;
   margin-left: 10px;
   min-width: 200px;
+  background-color: lightskyblue;
 }
 
 
