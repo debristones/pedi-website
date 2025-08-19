@@ -1,7 +1,7 @@
 
 
 .logo,.delivery,.search-bar,.country,.sign-in,.returns-orders,.cart {
-  background-color:rgb(15, 15, 85) ;
+  background-color:inherit ;
 }
 
 a{
@@ -15,7 +15,7 @@ a{
   position: relative;
   width: auto;
   color: white;
-  background-color: rgb(15, 15, 85);
+  background-color: blue;
   height: 45px;
   display: flex;
   align-items: center; 

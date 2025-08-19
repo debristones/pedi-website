@@ -38,7 +38,6 @@ h3{
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  background-color: blue;
 }
 
 .product-card {
@@ -51,19 +50,16 @@ h3{
   grid-template-rows: 2fr 0.2fr;
   margin-left: 10px;
   min-width: 200px;
-  background-color:pink;
 }
 
 
 .product-card .media {
   height: 180px;
-  background-color:red;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--dark-gray);
   font-size: var(--font-size-sm);
-  background-color: tan;
 }
 
 

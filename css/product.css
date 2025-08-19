@@ -74,10 +74,15 @@
   padding: 0;
 }
 
-html, body {
-  height: 100%;
-  font-family: var(--font-primary);
-}
+ * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    width: 1264.67px;
+  }
 
 a {
   text-decoration: none;
