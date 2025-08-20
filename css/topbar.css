@@ -149,34 +149,25 @@ a{
   align-items: center;
 }
 
-.top-topbar .top-bar-right{
+.top-bar-right {
+  background-color: red;
   display: flex;
-  right: 0pc; 
-   background-color: red; 
+  right: 0;
 }
 
-.sub-topbar .top-bar-right {
+.top-bar-right1 {
+  background-color: red;
   display: flex;
-  right: 0pc;
   position: absolute;
- 
+  right: 0;
   display: none;
 }
 
-   @media (max-device-width: 768px) {
-    .top-topbar .top-bar-right{
-      display: flex;
-      right: 0pc; 
-      display: none; 
-    }
-    .sub-topbar .top-bar-right {
-      display: flex;
-      right: 0pc;
-      position: absolute;
-      background-color: red;
-    }
+.sub-topbaritems ul {
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between ;
+  display: none;
 }
-
-
-   
- 
