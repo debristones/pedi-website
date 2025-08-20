@@ -17,6 +17,7 @@ a{
 .top-topbar{
   display: flex;
   align-items: center;
+  height: 80px;
 }
 
 .sub-topbar {
@@ -154,7 +155,7 @@ a{
     background-color:tomato;    
   }
   .top-bar-right1{
-    background-color: red;
+    background-color:inherit;
     display: flex;
     position: absolute;
     right: 0;
