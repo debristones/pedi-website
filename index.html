@@ -15,71 +15,103 @@
 </head>
 <body>
     <div class="overlay" id="overlay"></div>
-     <div class="topbar">
-        <div class="top-topbar">
-              <!-- Logo -->
-            <div class="logo">
-                <img src="https://via.placeholder.com/100x40?text=LOGO" alt="Company Logo">
-            </div>
-            <!-- Search -->
-            <div class="search-bar">
-                <input type="text" placeholder="Search...">
-                <button>search</button>
-            </div>
-            <div class="top-bar-right">
-              <!-- Sign In -->
-              <a href="account.html" >
-                <div class="sign-in">
-                  <span class="small-text">Hello, Sign in</span>
-                  <span class="big-text">Account</span>
-              </div>
-              </a>
-              <!-- Returns & Orders -->
-              <a href="checkout.html">
-                <div class="returns-orders">
-                  <span class="small-text">Returns</span>
-                  <span class="big-text">& Orders</span>
-                </div>
-              </a>
-              <a href="cart.html">
-                <div class="cart">
-                  🛒 Cart
-                </div>
-              </a>
-            </div> 
-        </div>
-        <div class="sub-topbar">
-          <div class="menu-btndiv" id="menuBtndiv">
-              <button class="menu-btn" id="menuBtn">menu</button>
+     <!-- Modern Semantic Header -->
+      <header class="topbar" role="banner">
+        <!-- Main Navigation Bar -->
+        <div class="main-navbar">
+          <!-- Brand/Logo -->
+          <div class="brand">
+            <a href="index.html" class="brand-link" aria-label="Go to homepage">
+              <img src="https://via.placeholder.com/120x40?text=KILO+PEDI" alt="Kilo Pedi" class="brand-logo">
+            </a>
           </div>
-          <!-- Delivery Options -->
-          <div class="delivery">
-              <span class="small-text">Deliver to</span>
-              <span class="big-text">Your Location</span>
-          </div>
-          <div class="top-bar-right1">
-              <!-- Sign In -->
-              <a href="account.html" >
-                <div class="sign-in">
-                  <span class="small-text">Hello, Sign in</span>
-                  <span class="big-text">Account</span>
+          
+          <!-- Mobile Menu Toggle -->
+          <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+          
+          <!-- Search Bar -->
+          <div class="search-container">
+            <form class="search-form" role="search">
+              
+              <div class="search-input-wrapper">
+                <input 
+                  type="search" 
+                  id="searchInput" 
+                  class="search-input" 
+                  placeholder="Search for products, brands and more..." 
+                  aria-label="Search products"
+                >
+                <button type="submit" class="search-button" aria-label="Search">
+                  <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 21L15.5 15.5M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
               </div>
-              </a>
-              <!-- Returns & Orders -->
-              <a href="checkout.html">
-                <div class="returns-orders">
-                  <span class="small-text">Returns</span>
-                  <span class="big-text">& Orders</span>
+            </form>
+          </div>
+          
+          <!-- Navigation Actions -->
+          <nav class="nav-actions" aria-label="User navigation">
+            <!-- Location/Delivery -->
+            <div class="nav-item location-selector">
+              <button class="location-button" aria-label="Select delivery location">
+                <svg class="location-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M21 10C21 17.55 12 23 12 23C12 23 3 17.55 3 10C3 5.025 7.025 1 12 1C16.975 1 21 5.025 21 10Z" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <div class="location-text">
+                  <span class="location-label">Deliver to</span>
+                  <span class="location-value">Your Location</span>
                 </div>
-              </a>
-              <a href="cart.html">
-                <div class="cart">
-                  🛒 Cart
-                </div>
-              </a>    
+              </button>
             </div>
+            
+            <!-- Account -->
+            <div class="nav-item">
+              <a href="account.html" class="nav-link account-link">
+                <svg class="account-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="nav-text">
+                  <span class="nav-label">Hello, Sign in</span>
+                  <span class="nav-value">Account & Lists</span>
+                </div>
+              </a>
+            </div>
+            
+            <!-- Orders -->
+            <div class="nav-item">
+              <a href="checkout.html" class="nav-link orders-link">
+                <svg class="orders-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M16 11V7C16 5.93913 15.5786 4.92172 14.8284 4.17157C14.0783 3.42143 13.0609 3 12 3C10.9391 3 9.92172 3.42143 9.17157 4.17157C8.42143 4.92172 8 5.93913 8 7V11M5 9H19L18 21H6L5 9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="nav-text">
+                  <span class="nav-label">Returns</span>
+                  <span class="nav-value">& Orders</span>
+                </div>
+              </a>
+            </div>
+            
+            <!-- Cart -->
+            <div class="nav-item">
+              <a href="cart.html" class="nav-link cart-link">
+                <div class="cart-wrapper">
+                  <svg class="cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.7 15.3C4.3 15.7 4.6 16.4 5.1 16.4H17M17 13V17C17 18.1 16.1 19 15 19H9C7.9 19 7 18.1 7 17V13H17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span class="cart-count" id="cartCount">0</span>
+                </div>
+                <span class="cart-text">Cart</span>
+              </a>
+            </div>
+          </nav>
         </div>
-      </div>  
+      </header>
 
      <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
@@ -206,5 +238,6 @@
 <script src="js/footer.js"></script>
 <script src="js/home1.js"></script>
 <script type="module" src="js/pcgenerator.js"></script>
+<script src="js/topbar.js"></script>
 </body>
 </html>
