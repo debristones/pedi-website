@@ -6,7 +6,6 @@ a{
 
 
 .topbar {
-  width: 100%;
   position: relative;
   width: 100%;
   color: white;
@@ -141,4 +140,13 @@ a{
   display: flex;
   justify-content: space-between ;
   display: none;
+}
+
+@media (max-device-width: 768px){
+  .top-bar-right1{
+    background-color: red;
+    display: flex;
+    position: absolute;
+    right: 0;
+  }
 }
