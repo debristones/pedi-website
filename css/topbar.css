@@ -151,26 +151,31 @@ a{
 
 .top-topbar .top-bar-right{
   display: flex;
-  right: 0pc;  
+  right: 0pc; 
+   background-color: red; 
 }
 
 .sub-topbar .top-bar-right {
   display: flex;
   right: 0pc;
   position: absolute;
+ 
   display: none;
 }
 
    @media (max-device-width: 768px) {
-.sub-topbar .top-bar-right {
-    display: flex;
-    right: 0pc;
-    position: absolute;
-    display: flex;}
-.top-topbar .top-bar-right {
-  }
+    .top-topbar .top-bar-right{
+      display: flex;
+      right: 0pc; 
+      display: none; 
+    }
+    .sub-topbar .top-bar-right {
+      display: flex;
+      right: 0pc;
+      position: absolute;
+      background-color: red;
+    }
 }
-
 
 
    
