@@ -165,7 +165,7 @@ a{
 /* Responsive Design */
 @media (max-width: 480px) {
   .topbar{
-    background-color: red;
+    display: none;
   }
 }
 
