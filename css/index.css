@@ -372,14 +372,3 @@ input:focus, select:focus {
   color: var(--text-light);
   margin-bottom: var(--spacing-lg);
 }
-
-@media (max-width: 480px){
-  body{
-    min-width: auto;
-  }
-
-  .topbar{
-    display: none;
-  }
-
-}

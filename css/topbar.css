@@ -6,7 +6,7 @@ a{
 
 
 .topbar {
-  width: 1264.64px;
+  width: 100%;
   position: relative;
   width: 100%;
   color: white;
@@ -17,6 +17,7 @@ a{
 
 .top-topbar{
   display: flex;
+  align-items: center;
 }
 
 .sub-topbar {
@@ -24,7 +25,6 @@ a{
   color: white;
   display: flex;
   align-items: center;
-  overflow-x: auto;
   position: relative;
 }
 
@@ -32,10 +32,6 @@ a{
     cursor: pointer;
     width: auto;
 }
-
-
-
-
      
 .menu-btn {
   top: 10px;
@@ -47,12 +43,6 @@ a{
   padding: 3px;
   z-index: 2000;
 }
-
-.menu-btn.move{
-  left: 250px;
-  z-index: 1000;
-}
-
 
 .overlay {
   position: fixed;          /* Stays in place when scrolling */
@@ -70,12 +60,8 @@ a{
   /* Visible when active */
 }
 
-
-
-
 .logo {
-  min-width: 150px;
-  
+  min-width: 150px;  
 }
 
 .logo img {
@@ -104,7 +90,6 @@ a{
   display: flex;
   flex: 1;
   position: relative;
-  padding-left: 30px;
 }
 
 .search-bar input {
@@ -126,20 +111,6 @@ a{
   height: 100%;
   border-radius: 15px;
 }
-
-.country {
-  display: flex;
-  flex: auto;
-  align-items: center;
-  min-width: 50px;
-}
-
-.country img {
-  width: 30px;
-  height: auto;
-  cursor: pointer;
-}
-
 .sign-in, .returns-orders, .cart {
   display: flex;
   flex-direction: column;
