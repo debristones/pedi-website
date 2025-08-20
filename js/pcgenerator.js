@@ -1,26 +1,24 @@
+import {products} from "/js/products1.js";
 
-const manyproducts = [
-  {name: "Product 1", price: "$10", image: "image1.jpg",cartegory: "electronics"},
-  {name: "Product 2", price: "$20", image: "image2.jpg",cartegory: "electronics"},
-  {name: "Product 3", price: "$30", image: "image3.jpg",cartegory: "electronics"},
-  {name: "Product 3", price: "$30", image: "image3.jpg",cartegory: "electronics"}
-];
+products.forEach((productz) => {console.log(productz);});
+
+
 
 const pgrids = document.querySelectorAll(".jsproduct-grid");
 
 pgrids.forEach((pgrid) => {
-  manyproducts.forEach((productz) => {
+  products.forEach((product) => {
   const productCard = document.createElement("div");
   productCard.className = "product-card";
   
   productCard.innerHTML = `
    
       <div onclick="location.href='product.html'" >
-        <div class="media">${productz.image}</div>
+        <div class="media"><img src="${product.image}"></div>
         <div class="body">
-          <h3>${productz.cartegory}</h3>
-          <p>${productz.name}</p>
-          <div class="price">${productz.price}</div>
+          <h3>${product.id}</h3>
+          <p>${product.name}</p>
+          <div class="price">${product.price}</div>
         </div>
       </div>
       <div class="addtocart-btn">
