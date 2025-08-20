@@ -12,58 +12,72 @@
 
 body {
     margin: 0;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    font-family: var(--font-primary);
     color: var(--text);
     background: var(--bg);
-    width: 1264.67px;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
 .sidebar {
-  height: 100%;
-  width: 250px;
+  height: 100vh;
+  width: 280px;
   position: fixed;
   top: 0;
-  left: -250px;
+  left: -280px;
   overflow-x: hidden;
   overflow-y: auto;
   transition: left 0.3s ease;
-  z-index: 999;
-  background-color: #f5f6f8;
-  height: 100vh;
+  z-index: 1000;
+  background-color: var(--white);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar a {
-  padding: 0.75rem 1rem;
+  padding: 1rem 1.5rem;
   display: block;
   text-decoration: none;
   color: var(--text);
+  border-bottom: 1px solid var(--gray);
+  transition: all 0.2s ease;
+  font-size: var(--font-size-md);
 }
 .sidebar a:hover {
-  background-color: #575757;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
 }
 .sidebar.open {
   left: 0;
   
 }
 
-.close-btn{
+.close-btn {
   position: absolute;
-  right: 5px;
-  top: 5px;
-  background-color:inherit;
+  right: 1rem;
+  top: 1rem;
+  background-color: var(--light-gray);
   border: none;
-  padding: 5px 10px;
+  padding: 0.5rem;
   cursor: pointer;
-  background-color: #555;
-}
-
-.profile-div{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
-  padding: 10px;
-  background-color: #3e1515;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  transition: all 0.2s ease;
+}
+
+.profile-div {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: var(--primary-color);
   color: white;
-  height: 60px;
+  min-height: 80px;
+  border-bottom: 1px solid var(--primary-hover);
 }
 
 .dropdown-btn {
@@ -73,22 +87,25 @@ body {
     width: 100%;
     cursor: pointer;
     outline: none;
-    font-size: inherit;
-    align-content: left;
-    padding: 10px;
-    padding-left: 15px;
+    font-size: var(--font-size-md);
+    padding: 1rem 1.5rem;
     text-align: left;
+    color: var(--text);
+    border-bottom: 1px solid var(--gray);
+    transition: all 0.2s ease;
   }
 
   .dropdown-btn:hover {
-    background-color: #575757;
+    background-color: var(--primary-light);
+    color: var(--primary-color);
   }
 
 .dropdown-container a {
-    background-color: #f5f6f8;
+    background-color: var(--secondary-light);
     color: var(--text);
-    text-decoration: none;  
-    left: 0;  
+    text-decoration: none;
+    padding-left: 2.5rem;
+    font-size: var(--font-size-sm);
   }
 
   .dropdown-container {
@@ -122,4 +139,194 @@ body {
 .sidebar.open::-webkit-scrollbar-track {
 background: #f0f0f0;
 border-radius: 6px;
+}
+
+.helpnsettings {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray);
+}
+
+.helpnsettings a {
+  color: var(--text-light);
+  font-size: var(--font-size-sm);
+}
+
+/* ===== RESPONSIVE DESIGN FOR SIDEBAR ===== */
+
+/* Large screens - full sidebar width */
+@media (min-width: 1200px) {
+  .sidebar {
+    width: 320px;
+    left: -320px;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+}
+
+/* Medium screens - standard sidebar */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .sidebar {
+    width: 280px;
+    left: -280px;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+}
+
+/* Mobile screens - full width sidebar with adjustments */
+@media (max-width: 767px) {
+  .sidebar {
+    width: 100%;
+    max-width: 320px;
+    left: -100%;
+    z-index: 1001;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .profile-div {
+    padding: 1rem;
+    min-height: 70px;
+  }
+  
+  .close-btn {
+    width: 44px;
+    height: 44px;
+    top: 1rem;
+    right: 1rem;
+  }
+  
+  .sidebar a {
+    padding: 1rem;
+    font-size: var(--font-size-md);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .dropdown-btn {
+    padding: 1rem;
+    min-height: 44px;
+    font-size: var(--font-size-md);
+  }
+  
+  .dropdown-container a {
+    padding: 0.75rem 1rem 0.75rem 2rem;
+    min-height: 40px;
+  }
+  
+  .helpnsettings {
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+  
+  .helpnsettings a {
+    padding: 0.75rem 1rem;
+    min-height: 40px;
+  }
+}
+
+/* Extra small screens - minimal sidebar */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100vw;
+    left: -100vw;
+  }
+  
+  .profile-div {
+    padding: 0.75rem 1rem;
+    min-height: 60px;
+    font-size: var(--font-size-sm);
+  }
+  
+  .close-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .sidebar a {
+    padding: 0.75rem 1rem;
+    font-size: var(--font-size-sm);
+  }
+  
+  .dropdown-btn {
+    padding: 0.75rem 1rem;
+    font-size: var(--font-size-sm);
+  }
+  
+  .dropdown-container a {
+    padding: 0.5rem 1rem 0.5rem 1.75rem;
+    font-size: var(--font-size-xs);
+  }
+  
+  .helpnsettings a {
+    padding: 0.5rem 1rem;
+    font-size: var(--font-size-xs);
+  }
+}
+
+/* Touch improvements for mobile devices */
+@media (max-width: 768px) {
+  .sidebar a,
+  .dropdown-btn,
+  .close-btn {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .sidebar a:active,
+  .dropdown-btn:active {
+    background-color: var(--primary-light);
+    transform: scale(0.98);
+  }
+  
+  .close-btn:active {
+    transform: scale(0.95);
+    background-color: var(--gray);
+  }
+}
+
+/* Hover effects only on non-touch devices */
+@media (hover: hover) {
+  .close-btn:hover {
+    background-color: var(--gray);
+    transform: scale(1.05);
+  }
+  
+  .dropdown-container a:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+    padding-left: 3rem;
+  }
+}
+
+/* Animation improvements for smooth interactions */
+@media (prefers-reduced-motion: no-preference) {
+  .sidebar {
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dropdown-container {
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.2s ease;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .sidebar {
+    border-right: 2px solid currentColor;
+  }
+  
+  .sidebar a,
+  .dropdown-btn {
+    border-bottom: 1px solid currentColor;
+  }
 }

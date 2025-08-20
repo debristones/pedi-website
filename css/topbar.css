@@ -9,23 +9,30 @@ a{
   position: relative;
   width: 100%;
   color: white;
-  background-color: blue;
+  background-color: #2563eb;
   height: auto;
-  align-items: center; 
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.top-topbar{
+.top-topbar {
   display: flex;
   align-items: center;
   height: 80px;
+  padding: 0 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .sub-topbar {
-  background-color: rgb(110, 110, 13);
+  background-color: #1d4ed8;
   color: white;
   display: flex;
   align-items: center;
   position: relative;
+  padding: 0.5rem 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .sub-topbar div {
@@ -90,13 +97,18 @@ a{
   display: flex;
   flex: 1;
   position: relative;
+  max-width: 600px;
+  margin: 0 1rem;
 }
 
 .search-bar input {
   flex: 1;
   border: none;
   outline: none;
-  border-radius: 15px;  
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  min-width: 0;
 }
 
 .search-bar button {
@@ -121,17 +133,18 @@ a{
 }
 
 .top-bar-right {
-  background-color: red;
   display: flex;
-  right: 0;
+  align-items: center;
+  gap: 1rem;
 }
 
 .top-bar-right1 {
-  background-color: red;
-  display: flex;
+  display: none;
   position: absolute;
   right: 0;
-  display: none;
+  background-color: inherit;
+  align-items: center;
+  gap: 1rem;
 }
 
 .sub-topbaritems ul {
@@ -143,25 +156,198 @@ a{
   display: none;
 }
 
-@media (max-device-width: 768px){
-  .container {
+/* ===== RESPONSIVE DESIGN FOR TOPBAR ===== */
+
+/* Large screens - full topbar layout */
+@media (min-width: 1200px) {
+  .top-topbar {
+    padding: 0 2rem;
+  }
+  
+  .search-bar {
+    max-width: 700px;
+  }
+}
+
+/* Medium screens - adjust spacing */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .top-topbar {
+    padding: 0 1.5rem;
+  }
+  
+  .search-bar {
+    max-width: 500px;
+  }
+  
+  .sign-in, .returns-orders, .cart {
+    min-width: 100px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small tablets - start hiding some elements */
+@media (max-width: 991px) {
+  .top-topbar {
+    height: auto;
+    padding: 0.5rem 1rem;
+  }
+  
+  .search-bar {
+    order: 3;
+    width: 100%;
+    max-width: none;
+    margin: 0.5rem 0;
+  }
+  
+  .top-bar-right {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .sign-in, .returns-orders, .cart {
+    min-width: 80px;
+    font-size: 0.85rem;
+  }
+  
+  .small-text {
+    font-size: 10px;
+  }
+  
+  .big-text {
+    font-size: 12px;
+  }
+}
+
+/* Mobile screens - major layout changes */
+@media (max-width: 768px) {
+  .topbar {
+    background-color: #2563eb;
+  }
+  
+  .top-topbar {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+  
+  .logo {
+    min-width: auto;
+    order: 1;
+  }
+  
+  .search-bar {
+    order: 3;
     width: 100%;
     margin: 0;
   }
-
-
-  .topbar{
-    width: 100%;
-    background-color:tomato;    
+  
+  .search-bar input {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
   }
-  .top-bar-right1{
-    background-color:inherit;
-    display: flex;
-    position: absolute;
-    right: 0;
-  }
-
+  
   .top-bar-right {
     display: none;
+  }
+  
+  .top-bar-right1 {
+    display: flex;
+    position: static;
+    order: 2;
+    width: 100%;
+    justify-content: space-around;
+    background-color: inherit;
+    padding: 0.5rem 0;
+  }
+  
+  .sub-topbar {
+    padding: 0.5rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .menu-btndiv {
+    margin-bottom: 0.5rem;
+  }
+  
+  .menu-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    width: auto;
+  }
+  
+  .delivery {
+    margin-left: 0;
+    text-align: center;
+    min-width: auto;
+  }
+}
+
+/* Extra small screens - minimal layout */
+@media (max-width: 480px) {
+  .top-topbar {
+    padding: 0.25rem;
+  }
+  
+  .logo img {
+    height: 30px;
+  }
+  
+  .search-bar input {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .search-bar button {
+    padding: 0.5rem;
+    font-size: 14px;
+  }
+  
+  .sign-in, .returns-orders, .cart {
+    min-width: 60px;
+    font-size: 0.75rem;
+  }
+  
+  .small-text {
+    font-size: 9px;
+  }
+  
+  .big-text {
+    font-size: 11px;
+  }
+  
+  .menu-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Touch-friendly improvements for mobile */
+@media (max-width: 768px) {
+  .sign-in, .returns-orders, .cart, .menu-btn {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .search-bar button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* Hover effects only on non-touch devices */
+@media (hover: hover) {
+  .menu-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .sign-in:hover, .returns-orders:hover, .cart:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
   }
 }

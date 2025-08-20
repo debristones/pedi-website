@@ -74,15 +74,14 @@
   padding: 0;
 }
 
-* { box-sizing: border-box; }
-  html, body { height: 100%; }
-  body {
-    width: 100%;
+body {
+    max-width: 100%;
     margin: 0;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    color: var(--text);
-    background: var(--bg);
-    background-color: blue;
+    font-family: var(--font-primary);
+    color: var(--text-dark);
+    background: var(--light-gray);
+    line-height: 1.6;
+    overflow-x: hidden;
   }
 
 a {
@@ -118,8 +117,10 @@ input:focus, select:focus {
 /* Utility classes */
 .container {
   width: 100%;
-  margin: 0;
-  background-color: purple;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: var(--white);
+  min-height: 100vh;
 }
 
 .btn {
@@ -222,8 +223,10 @@ input:focus, select:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: var(--spacing-xl);
+  margin: var(--spacing-md) var(--spacing-md) var(--spacing-xl);
   color: var(--white);
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
 }
 
 .hero h1 {
@@ -246,6 +249,7 @@ input:focus, select:focus {
   align-items: center;
   justify-content: center;
   font-size: var(--font-size-lg);
+  flex-shrink: 0;
 }
 
 /* Section headers */
@@ -372,4 +376,193 @@ input:focus, select:focus {
 .feature p {
   color: var(--text-light);
   margin-bottom: var(--spacing-lg);
+}
+
+/* CTA Button */
+.cta {
+  display: inline-block;
+  padding: var(--spacing-md) var(--spacing-xl);
+  background-color: var(--white);
+  color: var(--primary-color);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-md);
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  background-color: var(--light-gray);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large screens (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .content {
+    padding: 0 var(--spacing-lg);
+  }
+}
+
+/* Medium screens (tablets, 768px to 1199px) */
+@media (max-width: 1199px) {
+  .hero {
+    padding: var(--spacing-lg);
+    margin: var(--spacing-sm);
+  }
+  
+  .hero h1 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .hero .art {
+    width: 250px;
+    height: 150px;
+  }
+  
+  .content {
+    padding: 0 var(--spacing-md);
+  }
+}
+
+/* Small screens (tablets, 768px to 991px) */
+@media (max-width: 991px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--spacing-lg);
+  }
+  
+  .hero > div:first-child {
+    order: 1;
+  }
+  
+  .hero .art {
+    order: 2;
+    width: 100%;
+    max-width: 300px;
+    margin-top: var(--spacing-md);
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--spacing-md);
+  }
+  
+  .feature-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* Mobile screens (phones, up to 767px) */
+@media (max-width: 767px) {
+  .hero {
+    padding: var(--spacing-md);
+    margin: var(--spacing-xs);
+    border-radius: var(--radius-md);
+  }
+  
+  .hero h1 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .hero p {
+    font-size: var(--font-size-md);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .hero .art {
+    height: 120px;
+    font-size: var(--font-size-sm);
+  }
+  
+  .content {
+    padding: 0 var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: var(--spacing-sm);
+  }
+  
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+  
+  .section-header h2 {
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* Extra small screens (small phones, up to 480px) */
+@media (max-width: 480px) {
+  .hero {
+    padding: var(--spacing-sm);
+  }
+  
+  .hero h1 {
+    font-size: var(--font-size-lg);
+  }
+  
+  .hero p {
+    font-size: var(--font-size-sm);
+  }
+  
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xs);
+  }
+  
+  .cta {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: var(--font-size-sm);
+  }
+  
+  .content {
+    padding: 0 var(--spacing-xs);
+  }
+}
+
+/* Utility classes for responsive design */
+.hide-mobile {
+  display: block;
+}
+
+.show-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none;
+  }
+  
+  .show-mobile {
+    display: block;
+  }
+}
+
+/* Responsive text sizing */
+.responsive-text {
+  font-size: clamp(var(--font-size-sm), 2.5vw, var(--font-size-lg));
+}
+
+.responsive-heading {
+  font-size: clamp(var(--font-size-xl), 4vw, var(--font-size-3xl));
 }
