@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Viewport only affects mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Desktop Fixed + Mobile Responsive</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* === Desktop Default (fixed layout) === */
+    .container {
+      width: 1200px;   /* fixed width */
+      margin: 0 auto;
+    }
+
+    .navbar {
+      background: #3498db;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .special-div {
+      background: #f39c12;
+      padding: 5px 10px;
+      border-radius: 4px;
+      color: white;
+    }
+
+    /* Sub-top bar (hidden by default) */
+    .sub-top-bar {
+      display: none;
+      background: #2ecc71;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .sub-top-bar .menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    /* === Mobile Devices (only when opened on mobile) === */
+    @media (max-device-width: 768px) {
+      .container {
+        width: 100%; /* responsive full width */
+      }
+
+      .navbar {
+        justify-content: center;
+        padding: 10px;
+      }
+
+      /* hide menu in top bar */
+      .navbar .menu {
+        display: none;
+      }
+
+      /* show menu in sub-top bar */
+      .sub-top-bar {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Top bar -->
+    <div class="navbar">
+      <div class="logo">🌐 My Website</div>
+      <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <div class="special-div">⭐ Special Div</div>
+      </div>
+    </div>
+
+    <!-- Sub-top bar (appears only on mobile) -->
+    <div class="sub-top-bar">
+      <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <div class="special-div">⭐ Special Div</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
