@@ -1,4 +1,4 @@
-// JavaScript for the cart page
+
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {

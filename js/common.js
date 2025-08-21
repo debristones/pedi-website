@@ -5,6 +5,7 @@ const menuBtn = document.getElementById('menuBtn');
 const sidebar = document.getElementById('sidebar');
 const overlay = document.getElementById('overlay');
 const closeBtn = document.getElementById('closeBtn');
+const addToCartButtons = document.querySelectorAll('.addto-cartbtn123');
 
 // Cart Elements
 const cartCount = document.querySelector('.cart-count');
@@ -66,6 +67,7 @@ function addToCart(product) {
   
   updateCartCount();
   saveCart();
+  console.log(cart);
   
   // Show confirmation message
   showNotification(`${product.name} added to cart!`);
@@ -155,6 +157,25 @@ function clearCart() {
   showNotification('Cart cleared');
   console.log(cart);
 }
+
+addToCartButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    const cartitem = this.closest('.product-card');
+    const productName = cartitem.querySelector('p').textContent;
+    const productPrice = cartitem.querySelector('.price').textContent;
+    const productImage = cartitem.querySelector('img').src;
+    const productid =cartitem.querySelector('h3').textContent;
+
+    addToCart({
+      id: productid,
+      name: productName,
+      price: productPrice,
+      image: productImage,
+      quantity: 1
+    });
+
+  });
+})
 
 // Export functions for use in other modules
 window.ecommerce = {
