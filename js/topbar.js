@@ -1,7 +1,7 @@
 /**
  * Modern Topbar JavaScript
  * Handles mobile navigation, search functionality, and accessibility
- */
+ 
 
 class ModernTopbar {
   constructor() {
@@ -310,3 +310,4 @@ document.head.insertAdjacentHTML('beforeend', loadingSpinnerCSS);
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = ModernTopbar;
 }
+*/

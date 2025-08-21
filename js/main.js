@@ -9,6 +9,7 @@ const closeBtn = document.getElementById('closeBtn');
 // Cart Elements
 const cartCount = document.querySelector('.cart-count');
 let cart = [];
+consile.log(cart)
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {

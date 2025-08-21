@@ -23,6 +23,7 @@
       <a href="index.html" class="brand-link" aria-label="Go to homepage">
         <img src="https://via.placeholder.com/120x40?text=KILO+PEDI" alt="Kilo Pedi" class="brand-logo">
       </a>
+      <button style="background-color: chartreuse;" id="clear-cart">xcart</button>
     </div>
     
     <!-- Mobile Menu Toggle -->
@@ -60,7 +61,6 @@
         <button class="location-button" aria-label="Select delivery location">
           <svg class="location-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
             <path d="M21 10C21 17.55 12 23 12 23C12 23 3 17.55 3 10C3 5.025 7.025 1 12 1C16.975 1 21 5.025 21 10Z" stroke="currentColor" stroke-width="2"/>
-            <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
           </svg>
           <div class="location-text">
             <span class="location-label">Deliver to</span>
@@ -111,48 +111,6 @@
     </nav>
   </div>
 </header>
-
-<!-- Sidebar -->
-<div class="sidebar" id="sidebar">
-  <button class="close-btn" id="closeBtn">X</button>
-  <div class="profile-div">
-    <img >
-    <div class="profile-text">Hello, Sign-in</div>
-  </div>
-  <!-- Dropdown 1 -->
-  <div>
-      <a href="#">Electronics</a>
-      <a href="#">Smart Home</a>
-      <a href="#">Fashion</a>
-      <button class="dropdown-btn">
-        <span>
-          More ▼
-        </span>
-      </button>
-      <div class="dropdown-container">
-        <a href="#">Laptops</a>
-        <a href="#">Phones</a>
-        <a href="#">Accessories</a>
-        <a href="#">Accessories</a>
-        <a href="#">Accessories</a>
-        <a href="#">Accessories</a>
-        <a href="#">Accessories</a>
-        <a href="#">Accessories</a>
-      </div>
-  </div> 
-  <!-- Dropdown 2 -->
-  <button class="dropdown-btn">Services ▼</button>
-  <div class="dropdown-container">
-    <a href="#">Delivery</a>
-    <a href="#">Support</a>
-  </div>
-  <div class="helpnsettings">
-    <a href="#">Help & Settings</a> 
-    <a href="#">Your Account</a>
-    <a href="#">Your Orders</a>
-    <a href="#">Customer Service</a>
-  </div>
-</div>
 
   <!-- Main Content -->
   <div class="content">
@@ -289,7 +247,7 @@
 
           <!-- Saved for Later -->
           <div class="saved-items">
-            <h3>Saved for Later</h3>
+            <h3>Wish List</h3>
             <div class="saved-item">
               <div class="item-image">
                 <img src="https://via.placeholder.com/100x100?text=MacBook+Air" alt="MacBook Air">
@@ -312,8 +270,16 @@
     </div>
   </div>
 
+    <div class="product-container">
+      <div class="product-container-header">
+        <h2>my cart items</h2>
+      </div>
+      <div class="product-grid jscart-grid">       
+        
+      </div>
+    </div>
 
-    <!-- Product Containers -->
+    
   <div class="product-containers">
     <div class="product-container">
       <div class="product-container-header">
@@ -406,9 +372,10 @@
     </div>
   </footer>
 
-  <script src="js/common.js"></script>
-  <script src="js/cart.js"></script>
+  <script type="module" src="js/common.js"></script>
+  <script type="module" src="js/cart.js"></script>
   <script src="js/topbar.js"></script>
   <script type="module" src="js/pcgenerator.js"></script>
+  <script src="js/cart2.js"></script>
 </body>
 </html>

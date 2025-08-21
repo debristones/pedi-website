@@ -8,7 +8,8 @@ const closeBtn = document.getElementById('closeBtn');
 
 // Cart Elements
 const cartCount = document.querySelector('.cart-count');
-let cart = [];
+export let cart = [];
+
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
@@ -74,6 +75,7 @@ function removeFromCart(itemId) {
   cart = cart.filter(item => item.id != itemId);
   updateCartCount();
   saveCart();
+  
   
   // Remove item from DOM
   const cartItem = document.querySelector(`.cart-item[data-id="${itemId}"]`);
@@ -143,6 +145,17 @@ function showNotification(message) {
   }, 3000);
 }
 
+function clearCart() {
+  cart = [];
+  localStorage.removeItem('cart');
+  const cartItems = document.querySelectorAll('.cart-item');
+  cartItems.forEach(item => item.remove());
+  updateCartCount();
+  saveCart();
+  showNotification('Cart cleared');
+  console.log(cart);
+}
+
 // Export functions for use in other modules
 window.ecommerce = {
   initSidebar,
@@ -152,5 +165,7 @@ window.ecommerce = {
   updateQuantity,
   updateCartCount,
   saveCart,
-  showNotification
+  showNotification,
+  clearCart
 };
+

@@ -1,8 +1,5 @@
 import {products} from "/js/products1.js";
 
-products.forEach((productz) => {console.log(productz);});
-
-
 
 const pgrids = document.querySelectorAll(".jsproduct-grid");
 
@@ -22,7 +19,7 @@ pgrids.forEach((pgrid) => {
         </div>
       </div>
       <div class="addtocart-btn">
-        <button class="btn primary">Add to Cart</button>
+        <button class="addto-cartbtn123 btn primary">Add to Cart</button>
       </div>   
   `;  
   pgrid.appendChild(productCard);
