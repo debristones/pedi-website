@@ -167,24 +167,3 @@ input:focus {
   text-decoration: underline;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .container {
-    padding: var(--spacing-lg);
-    margin: 0 var(--spacing-sm);
-  }
-  
-  h2 {
-    font-size: var(--font-size-xl);
-  }
-  
-  input {
-    padding: var(--spacing-sm);
-    font-size: var(--font-size-sm);
-  }
-  
-  .btn {
-    padding: var(--spacing-sm);
-    font-size: var(--font-size-sm);
-  }
-}
